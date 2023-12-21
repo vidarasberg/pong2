@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr341xinqcdqp"]
+
+[ext_resource type="PackedScene" uid="uid://ddocxqkoemge6" path="res://player.tscn" id="1_d3s58"]
+[ext_resource type="PackedScene" uid="uid://cjwfunwew1r4q" path="res://hud.tscn" id="2_2v1mv"]
+[ext_resource type="PackedScene" uid="uid://c7omekepehvpa" path="res://ball.tscn" id="3_b1f13"]
+[ext_resource type="PackedScene" uid="uid://crme1f6fybu78" path="res://level.tscn" id="4_enlap"]
+
+[node name="Main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_d3s58")]
+position = Vector2(394, 424)
+metadata/_edit_group_ = true
+
+[node name="HUD" parent="." instance=ExtResource("2_2v1mv")]
+
+[node name="Ball" parent="." instance=ExtResource("3_b1f13")]
+position = Vector2(390, 101)
+
+[node name="Ball2" parent="." instance=ExtResource("3_b1f13")]
+position = Vector2(519, 65)
+
+[node name="Ball3" parent="." instance=ExtResource("3_b1f13")]
+position = Vector2(391, 214)
+
+[node name="Ball4" parent="." instance=ExtResource("3_b1f13")]
+position = Vector2(406, 582)
+gravity_scale = 0.0
+
+[node name="Level" parent="." instance=ExtResource("4_enlap")]
