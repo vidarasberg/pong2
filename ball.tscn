@@ -9,7 +9,8 @@ bounce = 0.09
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtcsc"]
 radius = 24.0208
 
-[node name="Ball" type="RigidBody2D"]
+[node name="Ball" type="RigidBody2D" groups=["balls"]]
+collision_layer = 3
 physics_material_override = SubResource("PhysicsMaterial_vp5ka")
 gravity_scale = 0.0
 script = ExtResource("1_jgo1v")

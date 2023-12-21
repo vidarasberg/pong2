@@ -1,38 +1,52 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr341xinqcdqp"]
+[gd_scene load_steps=7 format=3 uid="uid://dr341xinqcdqp"]
 
 [ext_resource type="PackedScene" uid="uid://ddocxqkoemge6" path="res://player.tscn" id="1_d3s58"]
 [ext_resource type="Script" path="res://main.gd" id="1_xhyps"]
 [ext_resource type="PackedScene" uid="uid://cjwfunwew1r4q" path="res://hud.tscn" id="2_2v1mv"]
+[ext_resource type="PackedScene" uid="uid://ccej43t5ofe7y" path="res://wall.tscn" id="3_8xcll"]
 [ext_resource type="PackedScene" uid="uid://c7omekepehvpa" path="res://ball.tscn" id="3_b1f13"]
-[ext_resource type="PackedScene" uid="uid://crme1f6fybu78" path="res://level.tscn" id="4_enlap"]
+[ext_resource type="PackedScene" uid="uid://3hqmbirqnd2q" path="res://goal.tscn" id="6_fj1va"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xhyps")
+ball_scene = ExtResource("3_b1f13")
+
+[node name="Goal" parent="." instance=ExtResource("6_fj1va")]
+position = Vector2(0, 363)
+
+[node name="Goal2" parent="." instance=ExtResource("6_fj1va")]
+position = Vector2(1280, 338)
 
 [node name="Player" parent="." instance=ExtResource("1_d3s58")]
-position = Vector2(845, 253)
+position = Vector2(291, 370)
 color = Color(1, 0, 0, 1)
 
 [node name="Player2" parent="." instance=ExtResource("1_d3s58")]
-position = Vector2(234, 251)
+position = Vector2(909, 363)
 move_right = "right2"
 move_left = "left2"
 move_down = "down2"
 move_up = "up2"
 color = Color(0, 0.827451, 0, 1)
 
+[node name="Wall" parent="." instance=ExtResource("3_8xcll")]
+position = Vector2(640, -50)
+
+[node name="Wall2" parent="." instance=ExtResource("3_8xcll")]
+position = Vector2(640, 770)
+
+[node name="Wall3" parent="." instance=ExtResource("3_8xcll")]
+position = Vector2(1328, 297)
+rotation = 1.5708
+
+[node name="Wall4" parent="." instance=ExtResource("3_8xcll")]
+position = Vector2(-52, 323)
+rotation = 1.5708
+
 [node name="HUD" parent="." instance=ExtResource("2_2v1mv")]
 
-[node name="Ball" parent="." instance=ExtResource("3_b1f13")]
-position = Vector2(390, 101)
+[node name="BallSpawn" type="Marker2D" parent="."]
+position = Vector2(636, 353)
 
-[node name="Ball2" parent="." instance=ExtResource("3_b1f13")]
-position = Vector2(519, 65)
-
-[node name="Ball3" parent="." instance=ExtResource("3_b1f13")]
-position = Vector2(391, 214)
-
-[node name="Ball4" parent="." instance=ExtResource("3_b1f13")]
-position = Vector2(406, 582)
-
-[node name="Level" parent="." instance=ExtResource("4_enlap")]
+[connection signal="goal" from="Goal" to="." method="_on_goal_goal"]
+[connection signal="goal" from="Goal2" to="." method="_on_goal_2_goal"]
