@@ -1,16 +1,26 @@
 extends CharacterBody2D
 
-var speed = 350
+@export var move_right := "right"
+@export var move_left := "left"
+@export var move_down := "down"
+@export var move_up := "up"
+@export var color: Color
+
+var speed = 500
 var gravity = 0
 # This represents the player's inertia.
 var push_force = 80.0
+var rotation_speed = 2
 
+func _ready():
+	$ColorRect.set_color(color)
 
 func get_input():
-	var input_direction = Input.get_vector("left", "right", "up", "down")
+	var input_direction = Input.get_vector(move_left, move_right, move_up, move_down)
 	velocity = input_direction * speed
 
 func _physics_process(delta):
+	rotation += rotation_speed * delta
 	velocity.y += gravity * delta
 	get_input()
 	move_and_slide()
