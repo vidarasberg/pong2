@@ -2,6 +2,7 @@ extends Node
 
 var player1score = 0
 var player2score = 0
+var winScore = 3
 
 @export var ball_scene: PackedScene
 @onready var viewportSize = get_viewport().size
@@ -13,14 +14,24 @@ func _ready():
 func spawn_ball():
 	var ball = ball_scene.instantiate()
 	ball.position = Vector2(viewportSize.x / 2, viewportSize.y / 2)
-	add_child(ball)
+	call_deferred("add_child", ball)
 
 func _on_goal_goal():
-	player1score += 1
-	$HUD.update_player2_score(player1score)
-	spawn_ball()
+	player2score += 1
+	
+	$HUD.update_player2_score(player2score)
+	
+	if player2score == winScore :
+		$HUD.show_winner("Green wins")
+	else :
+		spawn_ball()
 
 func _on_goal_2_goal():
-	player2score += 1
-	$HUD.update_player1_score(player2score)
-	spawn_ball()
+	player1score += 1
+	
+	$HUD.update_player1_score(player1score)
+	
+	if player1score == winScore :
+		$HUD.show_winner("Red wins")
+	else :
+		spawn_ball()
