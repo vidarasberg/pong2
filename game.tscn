@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr341xinqcdqp"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_mmtao"]
+[ext_resource type="PackedScene" uid="uid://c7omekepehvpa" path="res://ball.tscn" id="2_70wcf"]
+[ext_resource type="PackedScene" uid="uid://3hqmbirqnd2q" path="res://goal.tscn" id="3_mx2ki"]
+[ext_resource type="PackedScene" uid="uid://ddocxqkoemge6" path="res://player.tscn" id="4_f0dm5"]
+[ext_resource type="PackedScene" uid="uid://ccej43t5ofe7y" path="res://wall.tscn" id="5_otyad"]
+[ext_resource type="PackedScene" uid="uid://cjwfunwew1r4q" path="res://hud.tscn" id="6_g4e1x"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_mmtao")
+ball_scene = ExtResource("2_70wcf")
+
+[node name="Goal" parent="." instance=ExtResource("3_mx2ki")]
+position = Vector2(0, 362)
+color = Color(1, 0, 0, 0.392157)
+
+[node name="Goal2" parent="." instance=ExtResource("3_mx2ki")]
+position = Vector2(1280, 338)
+color = Color(0, 1, 0, 0.392157)
+
+[node name="Player" parent="." instance=ExtResource("4_f0dm5")]
+position = Vector2(13, 362)
+color = Color(1, 0, 0, 1)
+
+[node name="Player2" parent="." instance=ExtResource("4_f0dm5")]
+position = Vector2(1267, 338)
+move_right = "right2"
+move_left = "left2"
+move_down = "down2"
+move_up = "up2"
+rotate_right = "rotate_right2"
+rotate_left = "rotate_left2"
+color = Color(0, 0.827451, 0, 1)
+
+[node name="Wall" parent="." instance=ExtResource("5_otyad")]
+position = Vector2(640, -50)
+
+[node name="Wall2" parent="." instance=ExtResource("5_otyad")]
+position = Vector2(640, 770)
+
+[node name="Wall3" parent="." instance=ExtResource("5_otyad")]
+position = Vector2(1330, 300)
+rotation = 1.5708
+
+[node name="Wall4" parent="." instance=ExtResource("5_otyad")]
+position = Vector2(-50, 323)
+rotation = 1.5708
+
+[node name="HUD" parent="." instance=ExtResource("6_g4e1x")]
+
+[connection signal="goal" from="Goal" to="." method="_on_goal_goal"]
+[connection signal="goal" from="Goal2" to="." method="_on_goal_2_goal"]
