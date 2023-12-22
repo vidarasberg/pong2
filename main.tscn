@@ -13,9 +13,11 @@ ball_scene = ExtResource("3_b1f13")
 
 [node name="Goal" parent="." instance=ExtResource("6_fj1va")]
 position = Vector2(0, 362)
+color = Color(1, 0, 0, 0.392157)
 
 [node name="Goal2" parent="." instance=ExtResource("6_fj1va")]
 position = Vector2(1280, 338)
+color = Color(0, 1, 0, 0.392157)
 
 [node name="Player" parent="." instance=ExtResource("1_d3s58")]
 position = Vector2(13, 362)
@@ -46,9 +48,6 @@ position = Vector2(-50, 323)
 rotation = 1.5708
 
 [node name="HUD" parent="." instance=ExtResource("2_2v1mv")]
-
-[node name="BallSpawn" type="Marker2D" parent="."]
-position = Vector2(636, 353)
 
 [connection signal="goal" from="Goal" to="." method="_on_goal_goal"]
 [connection signal="goal" from="Goal2" to="." method="_on_goal_2_goal"]

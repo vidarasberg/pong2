@@ -8,6 +8,7 @@ size = Vector2(200, 1000)
 [node name="Goal" type="Area2D"]
 collision_layer = 2
 script = ExtResource("1_a5e42")
+metadata/_edit_group_ = true
 
 [node name="BallDetector" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_u2srg")

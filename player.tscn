@@ -8,6 +8,7 @@ size = Vector2(26, 86)
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_0blfb")
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -13.0

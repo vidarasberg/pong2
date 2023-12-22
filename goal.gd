@@ -1,17 +1,10 @@
 extends Area2D
 
 signal goal
+@export var color: Color
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+	$BallDetector/ColorRect.set_color(color)
 
 func _on_body_entered(body):
 	if body.is_in_group("balls"):
