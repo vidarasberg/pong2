@@ -12,19 +12,19 @@ script = ExtResource("1_mmtao")
 ball_scene = ExtResource("2_70wcf")
 
 [node name="Goal" parent="." instance=ExtResource("3_mx2ki")]
-position = Vector2(0, 362)
+position = Vector2(0, 360)
 color = Color(1, 0, 0, 0.392157)
 
 [node name="Goal2" parent="." instance=ExtResource("3_mx2ki")]
-position = Vector2(1280, 338)
+position = Vector2(1280, 360)
 color = Color(0, 1, 0, 0.392157)
 
 [node name="Player" parent="." instance=ExtResource("4_f0dm5")]
-position = Vector2(13, 362)
+position = Vector2(13, 360)
 color = Color(1, 0, 0, 1)
 
 [node name="Player2" parent="." instance=ExtResource("4_f0dm5")]
-position = Vector2(1267, 338)
+position = Vector2(1267, 360)
 move_right = "right2"
 move_left = "left2"
 move_down = "down2"
@@ -40,11 +40,11 @@ position = Vector2(640, -50)
 position = Vector2(640, 770)
 
 [node name="Wall3" parent="." instance=ExtResource("5_otyad")]
-position = Vector2(1330, 300)
+position = Vector2(1330, 360)
 rotation = 1.5708
 
 [node name="Wall4" parent="." instance=ExtResource("5_otyad")]
-position = Vector2(-50, 323)
+position = Vector2(-50, 360)
 rotation = 1.5708
 
 [node name="HUD" parent="." instance=ExtResource("6_g4e1x")]

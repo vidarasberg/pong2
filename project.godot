@@ -10,10 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Pong"
+config/name="Pong2"
 run/main_scene="res://ui.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+boot_splash/image="res://assets/title.png"
+config/icon="res://assets/title.png"
 
 [display]
 
@@ -102,4 +105,4 @@ start={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.596078, 0.596078, 0.596078, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
