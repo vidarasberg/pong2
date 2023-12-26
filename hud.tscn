@@ -1,12 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjwfunwew1r4q"]
+[gd_scene load_steps=2 format=3 uid="uid://cjwfunwew1r4q"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_e6iku"]
-
-[sub_resource type="InputEventAction" id="InputEventAction_grpxn"]
-action = &"start"
-
-[sub_resource type="Shortcut" id="Shortcut_ngpaw"]
-events = [SubResource("InputEventAction_grpxn")]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_e6iku")
@@ -58,7 +52,6 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 32
-shortcut = SubResource("Shortcut_ngpaw")
 text = "Restart"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

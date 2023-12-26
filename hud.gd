@@ -12,6 +12,7 @@ func update_player2_score(score):
 func show_winner(text: String):
 	$WinMessage.text = text
 	$RestartButton.show()
+	$RestartButton.grab_focus()
 
 func _on_restart_button_pressed():
 	get_tree().change_scene_to_file("res://game.tscn")
