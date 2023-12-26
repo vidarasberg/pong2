@@ -5,7 +5,6 @@ var player2score = 0
 var winScore = 5
 
 @export var ball_scene: PackedScene
-@onready var viewportSize = get_viewport().size
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +12,9 @@ func _ready():
 	
 func spawn_ball():
 	var ball = ball_scene.instantiate()
+	var viewportSize = get_viewport().get_visible_rect().size
+	print(viewportSize.x / 2)
+	print(viewportSize.y / 2)
 	ball.position = Vector2(viewportSize.x / 2, viewportSize.y / 2)
 	call_deferred("add_child", ball)
 

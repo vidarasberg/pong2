@@ -6,7 +6,7 @@
 bounce = 0.09
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtcsc"]
-radius = 24.0208
+radius = 22.0227
 
 [node name="Ball" type="RigidBody2D" groups=["balls"]]
 collision_layer = 3

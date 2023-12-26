@@ -3,10 +3,11 @@
 [ext_resource type="Script" path="res://goal.gd" id="1_a5e42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u2srg"]
-size = Vector2(200, 1000)
+size = Vector2(120, 1000)
 
 [node name="Goal" type="Area2D"]
 collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_a5e42")
 metadata/_edit_group_ = true
 
@@ -14,9 +15,9 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_u2srg")
 
 [node name="ColorRect" type="ColorRect" parent="BallDetector"]
-offset_left = -100.0
+offset_left = -99.5
 offset_top = -500.0
-offset_right = 100.0
+offset_right = 100.5
 offset_bottom = 500.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
