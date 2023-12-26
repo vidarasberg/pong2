@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://c2eytacnn4dm6" path="res://assets/ballBlue_10.png" id="1_oq1vn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vp5ka"]
-bounce = 0.09
+rough = true
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xtcsc"]
 radius = 22.0227
