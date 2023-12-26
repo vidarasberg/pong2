@@ -11,8 +11,7 @@ func _ready():
 	spawn_ball()
 	
 func spawn_ball():
-	var t = Timer.new() 		# Create a new Timer node
-	t.set_wait_time(5)
+	await get_tree().create_timer(1).timeout
 	var ball = ball_scene.instantiate()
 	var viewportSize = get_viewport().get_visible_rect().size
 	ball.position = Vector2(viewportSize.x / 2, viewportSize.y / 2)
