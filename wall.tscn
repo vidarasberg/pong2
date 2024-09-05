@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://ccej43t5ofe7y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aydpl"]
-size = Vector2(1280, 100)
+size = Vector2(2560, 1000)
 
 [node name="Wall" type="StaticBody2D"]
 metadata/_edit_group_ = true

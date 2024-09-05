@@ -34,17 +34,17 @@ rotate_left = "rotate_left2"
 color = Color(0, 0.827451, 0, 1)
 
 [node name="Wall" parent="." instance=ExtResource("5_otyad")]
-position = Vector2(640, -50)
+position = Vector2(593, -500)
 
 [node name="Wall2" parent="." instance=ExtResource("5_otyad")]
-position = Vector2(640, 770)
+position = Vector2(638, 1221)
 
 [node name="Wall3" parent="." instance=ExtResource("5_otyad")]
-position = Vector2(1330, 360)
+position = Vector2(1778, 233)
 rotation = 1.5708
 
 [node name="Wall4" parent="." instance=ExtResource("5_otyad")]
-position = Vector2(-50, 360)
+position = Vector2(-501, 317)
 rotation = 1.5708
 
 [node name="HUD" parent="." instance=ExtResource("6_g4e1x")]
